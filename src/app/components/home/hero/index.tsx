@@ -47,7 +47,7 @@ function HeroSection() {
                 </span>
               </h1>
               <p className='max-w-38 text-dark_black/60 dark:text-white/60'>
-                At Awake, we help small startups tackle the world’s biggest
+                At Hawkrix, we help small startups tackle the world’s biggest
                 challenges with tailored solutions, guiding you from strategy to
                 success in a competitive market.
               </p>
