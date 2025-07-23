@@ -86,44 +86,29 @@ const Header = () => {
                   </div>
                 </div>
               ) : (
-                <div className="flex items-center gap-2">
-                  <Link
-                    href={"/signin"}
-                    className="hidden lg:block bg-transparent border border-dark_black dark:border-white/50 text-primary px-2.5 xl:px-4 py-2 rounded-full hover:bg-dark_black hover:text-white"
-                  >
-                    Sign In
-                  </Link>
-                  <Link
-                    href={"/signup"}
-                    className="hidden lg:block text-white px-2.5 xl:px-4 py-2  bg-dark_black dark:bg-white/20 rounded-full hover:opacity-90"
-                  >
-                    Sign Up
-                  </Link>
-                </div>
+                <>
+                  <ThemeToggler />
+                  <div className="hidden max-lg:flex">
+                    <button onClick={() => setSidebarOpen(!sidebarOpen)}>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="none"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeMiterlimit="10"
+                          strokeWidth="1.5"
+                          d="M4.5 12h15m-15 5.77h15M4.5 6.23h15"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </>
               )}
-
-              {/* ---------------------Light/Dark Mode button-------------------- */}
-              <ThemeToggler />
-
-              <div className="hidden max-lg:flex">
-                <button onClick={() => setSidebarOpen(!sidebarOpen)}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeMiterlimit="10"
-                      strokeWidth="1.5"
-                      d="M4.5 12h15m-15 5.77h15M4.5 6.23h15"
-                    />
-                  </svg>
-                </button>
-              </div>
             </div>
           </nav>
         </div>
