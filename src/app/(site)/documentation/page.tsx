@@ -1,13 +1,13 @@
-import { Documentation } from '@/app/components/documentation/Documentation'
-import { Metadata } from 'next'
+import { Documentation } from "@/app/components/documentation/Documentation";
+import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: 'Documentation | Awake Agency',
-}
+  title: "Documentation | Awake Agency",
+};
 
 export default function Page() {
   return (
     <>
       <Documentation />
     </>
-  )
+  );
 }

@@ -1,4 +1,3 @@
-
 import ForgotPassword from "@/app/components/auth/forgot-password";
 import { Metadata } from "next";
 

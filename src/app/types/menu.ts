@@ -34,14 +34,14 @@ export type creativeMind = {
   position: string;
   twitterLink: string;
   linkedinLink: string;
-}
+};
 
 export type WebResultTag = {
   image: string;
   name: string;
   bg_color: string;
   txt_color: string;
-}
+};
 
 export type startupPlan = {
   plan_bg_color: string;
@@ -53,12 +53,12 @@ export type startupPlan = {
   descp_color: string;
   icon_img: string;
   plan_feature: Array<string>;
-}
+};
 
 export type faq = {
   faq_que: string;
   faq_ans: string;
-}
+};
 
 export type achievements = {
   icon: string;
@@ -67,4 +67,4 @@ export type achievements = {
   title: string;
   year: string;
   url: string;
-}
+};
