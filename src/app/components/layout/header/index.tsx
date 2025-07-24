@@ -87,14 +87,52 @@ const Header = () => {
                 </div>
               ) : (
                 <>
+                  <Link
+                    href="/contact"
+                    className=" group hidden md:flex
+ items-center gap-2 px-5 py-2 rounded-full 
+              text-black border border-black 
+              dark:text-white dark:border-white
+                font-semibold shadow-md transition duration-300 
+              hover:bg-black hover:text-white 
+                focus:outline-none"
+                    style={{ minWidth: 120, justifyContent: "center" }}
+                  >
+                    <span className="transition-transform duration-200 group-hover:translate-x-1">
+                      Contact Us
+                    </span>
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="transition-transform duration-200 group-hover:translate-x-1 border dark:border-white rounded-full"
+                    >
+                      <rect
+                        width="22"
+                        height="22"
+                        rx="11"
+                        className="fill-white group-hover:fill-black dark:group-hover:fill-white transition-colors duration-200"
+                      />
+                      <path
+                        d="M8 11h6M14 11l-2-2m2 2l-2 2"
+                        stroke="#000"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="transition-colors duration-200 group-hover:stroke-white dark:group-hover:stroke-black"
+                      />
+                    </svg>
+                  </Link>
+
                   <ThemeToggler />
                   <div className="hidden max-lg:flex">
                     <button onClick={() => setSidebarOpen(!sidebarOpen)}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="24"
+                        width="30"
                         height="24"
-                        viewBox="0 0 24 24"
                       >
                         <path
                           fill="none"
@@ -184,16 +222,41 @@ const Header = () => {
                 ) : (
                   <>
                     <Link
-                      href={"/signin"}
-                      className="w-full border border-dark_black dark:border-white text-primary px-4 py-2 rounded-md hover:bg-dark_black dark:hover:bg-white hover:text-white dark:hover:text-dark_black"
+                      href="/contact"
+                      className="group flex items-center gap-2 px-5 py-2 rounded-full 
+              text-black border border-black 
+              dark:text-white dark:border-white
+                font-semibold shadow-md transition duration-300 
+              hover:bg-black hover:text-white 
+                focus:outline-none"
+                      style={{ minWidth: 120, justifyContent: "center" }}
                     >
-                      Sign In
-                    </Link>
-                    <Link
-                      href={"/signup"}
-                      className="w-full text-white dark:text-dark_black px-4 py-2 bg-dark_black dark:bg-white rounded-md hover:opacity-90"
-                    >
-                      Sign Up
+                      <span className="transition-transform duration-200 group-hover:translate-x-1">
+                        Contact Us
+                      </span>
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="transition-transform duration-200 group-hover:translate-x-1 border dark:border-white rounded-full"
+                      >
+                        <rect
+                          width="22"
+                          height="22"
+                          rx="11"
+                          className="fill-white group-hover:fill-black dark:group-hover:fill-white transition-colors duration-200"
+                        />
+                        <path
+                          d="M8 11h6M14 11l-2-2m2 2l-2 2"
+                          stroke="#000"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="transition-colors duration-200 group-hover:stroke-white dark:group-hover:stroke-black"
+                        />
+                      </svg>
                     </Link>
                   </>
                 )}

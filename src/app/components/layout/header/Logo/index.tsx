@@ -1,29 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
 
-interface HeaderProps {}
-const Logo: React.FC<HeaderProps> = () => {
+const Logo: React.FC = () => {
   return (
-    <Link href="/">
-      <Image
-        src="/images/logo/logo.svg"
-        alt="logo"
-        width={117}
-        height={34}
-        style={{ width: "auto", height: "auto" }}
-        quality={100}
-        priority={true}
-        className="dark:hidden"
-      />
-      <Image
-        src="/images/logo/DarkModeLogo.svg"
-        alt="logo"
-        width={160}
-        height={50}
-        style={{ width: "auto", height: "auto" }}
-        quality={100}
-        className="dark:block hidden"
-      />
+    <Link href="/" className="inline-block">
+      <div className="relative w-[150px] h-[80px] sm:w-[150px] sm:h-[70px]">
+        <Image
+          src="/images/logo/hawkrix logo.png"
+          alt="Hawkrix Logo"
+          fill
+          className="dark:hidden object-contain"
+          quality={100}
+          priority
+        />
+        <Image
+          src="/images/logo/hawkrix logo.png"
+          alt="Hawkrix Logo Dark"
+          fill
+          className="hidden dark:block object-contain invert"
+          quality={100}
+          priority
+        />
+      </div>
     </Link>
   );
 };

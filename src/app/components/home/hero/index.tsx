@@ -32,7 +32,7 @@ function HeroSection() {
 
   return (
     <section>
-      <div className="relative w-full pt-44 2xl:pb-20 pb-10 before:absolute before:w-full before:h-full before:bg-linear-to-r before:from-blue_gradient before:via-white before:to-yellow_gradient before:rounded-full before:top-24 before:blur-3xl before:-z-10 dark:before:from-dark_blue_gradient dark:before:via-black dark:before:to-dark_yellow_gradient dark:before:rounded-full dark:before:blur-3xl dark:before:-z-10">
+      <div className="relative w-full pt-40 2xl:pb-20 pb-10 before:absolute before:w-full before:h-full before:bg-linear-to-r before:from-blue_gradient before:via-white before:to-yellow_gradient before:rounded-full before:top-24 before:blur-3xl before:-z-10 dark:before:from-dark_blue_gradient dark:before:via-black dark:before:to-dark_yellow_gradient dark:before:rounded-full dark:before:blur-3xl dark:before:-z-10">
         <div className="container relative z-10">
           <div ref={ref} className="flex flex-col gap-8">
             {/* ---------------- heading text --------------- */}
@@ -41,13 +41,12 @@ function HeroSection() {
               className="relative flex flex-col text-center items-center gap-4"
             >
               <h1 className="font-medium w-full">
-                Building bold brands with
+                From Vision to Execution {" "}
                 <span className="instrument-font italic font-normal dark:text-white/70">
-                  {" "}
-                  thoughtful design
+                  We Transform Ideas into Reality
                 </span>
               </h1>
-              <p className="max-w-38 text-dark_black/60 dark:text-white/60">
+              <p className="max-w-38 text-dark_black/60 dark:text-white/60 text-xl font-normal">
                 At Hawkrix, we help small startups tackle the world’s biggest
                 challenges with tailored solutions, guiding you from strategy to
                 success in a competitive market.
@@ -121,7 +120,7 @@ function HeroSection() {
                       <StarRating count={4} color="#F59E0B" />
                     </div>
                     <p className="text-sm font-normal text-dark_black/60 dark:text-white/60">
-                      Trusted by 1000+ clients
+                      Clients trust us — and grow with us
                     </p>
                   </div>
                 </div>

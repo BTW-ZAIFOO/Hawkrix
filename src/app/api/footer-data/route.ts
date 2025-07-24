@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 const footerData = {
   brand: {
-    name: "Awake",
+    name: "hawkrix",
     tagline:
       "Empowering businesses with innovative solutions. Let's create something amazing together.",
     socialLinks: [
