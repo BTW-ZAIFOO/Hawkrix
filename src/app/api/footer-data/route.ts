@@ -9,12 +9,17 @@ const footerData = {
       {
         icon: "/images/home/footerSocialIcon/linkedin.svg",
         dark_icon: "/images/home/footerSocialIcon/linkedin_dark.svg",
-        link: "https://linkedin.com/in",
+        link: "https://www.linkedin.com/company/hawkrix/",
       },
       {
         icon: "/images/home/footerSocialIcon/instagram.svg",
         dark_icon: "/images/home/footerSocialIcon/instagram_dark.svg",
-        link: "https://instagram.com",
+        link: "https://www.instagram.com/hawkrix?igsh=MTMzb3J1cWMwcW1sNQ==",
+      },
+      {
+        icon: "/images/home/footerSocialIcon/email.png",
+        dark_icon: "/images/home/footerSocialIcon/email_dark.png",
+        link: "mailto:careers.hawkrix@gmail.com",
       },
     ],
   },
