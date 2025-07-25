@@ -38,14 +38,14 @@ function CreativeMind() {
             <div className="max-w-32 text-center">
               <motion.div {...bottomAnimation(-1)}>
                 <h2>
-                  Meet the creative minds behind{" "}
+                  Led by passion, meet the mind behind{" "}
                   <span className="instrument-font italic font-normal dark:text-white/70">
-                    our success
+                    our mission
                   </span>
                 </h2>
               </motion.div>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8">
+            <div className="flex items-center justify-center">
               {creativeMindList?.map((item: any, index: any) => {
                 return (
                   <motion.div {...bottomAnimation(index)} key={index}>

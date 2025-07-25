@@ -102,56 +102,34 @@ const onlinePresenceList: onlinePresence[] = [
     image: "/images/home/onlinePresence/online_img_1.jpg",
     title: "FlowBank",
     tag: ["UX Research", "Interface Design"],
-    link: "https://www.wrappixel.com/",
+    link: "",
   },
   {
     image: "/images/home/onlinePresence/online_img_2.jpg",
     title: "Academy.co",
     tag: ["Product Design", "Interaction Design"],
-    link: "https://www.wrappixel.com/",
+    link: "",
   },
   {
     image: "/images/home/onlinePresence/online_img_3.jpg",
     title: "Genome",
     tag: ["Brand identity design", "UX Research"],
-    link: "https://www.wrappixel.com/",
+    link: "",
   },
   {
     image: "/images/home/onlinePresence/online_img_4.jpg",
     title: "Hotto",
     tag: ["Visual Storytelling", "Web & Mobile Design"],
-    link: "https://www.wrappixel.com/",
+    link: "",
   },
 ];
 
 const creativeMindList: creativeMind[] = [
   {
-    image: "/images/home/creative/creative_img_1.png",
-    name: "Logan Dang",
-    position: "WordPress Developer",
-    twitterLink: "https://x.com/",
-    linkedinLink: "https://in.linkedin.com/",
-  },
-  {
-    image: "/images/home/creative/creative_img_2.png",
-    name: "Ana Belić",
-    position: "Social Media Specialist",
-    twitterLink: "https://x.com/",
-    linkedinLink: "https://in.linkedin.com/",
-  },
-  {
-    image: "/images/home/creative/creative_img_3.png",
-    name: "Brian Hanley",
-    position: "Product Designer",
-    twitterLink: "https://x.com/",
-    linkedinLink: "https://in.linkedin.com/",
-  },
-  {
-    image: "/images/home/creative/creative_img_4.png",
-    name: "Darko Stanković",
-    position: "UI Designer",
-    twitterLink: "https://x.com/",
-    linkedinLink: "https://in.linkedin.com/",
+    image: "/images/home/creative/ceo.JPG",
+    name: "HUZAIFA KHAN",
+    position: "CE0 & Founder-Hawkrix",
+    linkedinLink: "https://www.linkedin.com/in/huzaifakhan11",
   },
 ];
 
@@ -224,12 +202,12 @@ const faqList: faq[] = [
   {
     faq_que: "How long does a typical project take?",
     faq_ans:
-      "Project timelines vary depending on complexity and requirements. Most projects take between 4 to 12 weeks from start to finish.",
+      "Project timelines vary depending on complexity and requirements.",
   },
   {
     faq_que: "How is pricing structured at Hawkrix Agency?",
     faq_ans:
-      "Pricing is structured based on the scope and complexity of the project. We offer different plans to suit various needs, including Starter and Pro packages.",
+      "Pricing is structured based on the scope and complexity of the project. We offer different plans to suit various needs.",
   },
   {
     faq_que: "Do you offer ongoing support after project completion?",

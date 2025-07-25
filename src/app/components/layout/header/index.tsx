@@ -2,9 +2,6 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { signOut, useSession } from "next-auth/react";
-import { Icon } from "@iconify/react/dist/iconify.js";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import HeaderLink from "./Navigation/HeaderLink";
 import { headerData } from "./Navigation/Menudata";
@@ -13,9 +10,7 @@ import MobileHeader from "./Navigation/MobileHeader";
 import ThemeToggler from "./ThemeToggle";
 
 const Header = () => {
-  const { data: session } = useSession();
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [user, setUser] = useState<{ user: any } | null>(null);
   const [sticky, setSticky] = useState(false);
   const pathname = usePathname();
 
@@ -25,20 +20,11 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    const storedUser = localStorage.getItem("user");
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
-    }
+    
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [pathname]);
-
-  const handleSignOut = () => {
-    localStorage.removeItem("user");
-    signOut();
-    setUser(null);
-  };
 
   return (
     <>
@@ -62,96 +48,68 @@ const Header = () => {
               </ul>
             </div>
             <div className="flex items-center gap-1 xl:gap-4">
-              {/* ---------------------SignUp SignIn Button-----------------  */}
-              {user?.user || session?.user ? (
-                <div className="hidden lg:flex gap-4">
-                  <button
-                    onClick={() => handleSignOut()}
-                    className="flex group font-normal items-center gap-1 transition-all duration-200 ease-in-out text-white px-4 py-2 bg-dark_black dark:bg-white/15 rounded-full hover:text-dark_black hover:bg-white dark:hover:bg-white/5 dark:hover:text-white border border-dark_black"
-                  >
-                    Sign Out
-                    <Icon icon="solar:logout-outline" width="25" height="25" />
-                  </button>
-                  <div className="relative group">
-                    <Image
-                      src="/images/home/avatar_1.jpg"
-                      alt="Image"
-                      width={40}
-                      height={40}
-                      quality={100}
-                      className="rounded-full cursor-pointer"
-                    />
-                    <p className="absolute w-fit text-sm text-center z-10 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-opacity duration-200 bg-white dark:bg-white/5 text-dark_black/60 p-1 min-w-28 rounded-lg shadow-2xl top-full left-1/2 transform -translate-x-1/2 mt-3">
-                      {user?.user || session?.user?.name}
-                    </p>
-                  </div>
-                </div>
-              ) : (
-                <>
-                  <Link
-                    href="/contact"
-                    className=" group hidden md:flex
- items-center gap-2 px-5 py-2 rounded-full 
+              <>
+                <Link
+                  href="/contact"
+                  className=" group hidden md:flex
+                              items-center gap-2 px-5 py-2 rounded-full 
               text-black border border-black 
               dark:text-white dark:border-white
                 font-semibold shadow-md transition duration-300 
               hover:bg-black hover:text-white 
                 focus:outline-none"
-                    style={{ minWidth: 120, justifyContent: "center" }}
+                  style={{ minWidth: 120, justifyContent: "center" }}
+                >
+                  <span className="transition-transform duration-200 group-hover:translate-x-1">
+                    Contact Us
+                  </span>
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="transition-transform duration-200 group-hover:translate-x-1 border dark:border-white rounded-full"
                   >
-                    <span className="transition-transform duration-200 group-hover:translate-x-1">
-                      Contact Us
-                    </span>
-                    <svg
+                    <rect
                       width="22"
                       height="22"
-                      viewBox="0 0 22 22"
-                      fill="none"
+                      rx="11"
+                      className="fill-white group-hover:fill-black dark:group-hover:fill-white transition-colors duration-200"
+                    />
+                    <path
+                      d="M8 11h6M14 11l-2-2m2 2l-2 2"
+                      stroke="#000"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="transition-colors duration-200 group-hover:stroke-white dark:group-hover:stroke-black"
+                    />
+                  </svg>
+                </Link>
+                <ThemeToggler />
+                <div className="hidden max-lg:flex">
+                  <button onClick={() => setSidebarOpen(!sidebarOpen)}>
+                    <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="transition-transform duration-200 group-hover:translate-x-1 border dark:border-white rounded-full"
+                      width="30"
+                      height="24"
                     >
-                      <rect
-                        width="22"
-                        height="22"
-                        rx="11"
-                        className="fill-white group-hover:fill-black dark:group-hover:fill-white transition-colors duration-200"
-                      />
                       <path
-                        d="M8 11h6M14 11l-2-2m2 2l-2 2"
-                        stroke="#000"
-                        strokeWidth="1.5"
+                        fill="none"
+                        stroke="currentColor"
                         strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="transition-colors duration-200 group-hover:stroke-white dark:group-hover:stroke-black"
+                        strokeMiterlimit="10"
+                        strokeWidth="1.5"
+                        d="M4.5 12h15m-15 5.77h15M4.5 6.23h15"
                       />
                     </svg>
-                  </Link>
-
-                  <ThemeToggler />
-                  <div className="hidden max-lg:flex">
-                    <button onClick={() => setSidebarOpen(!sidebarOpen)}>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="30"
-                        height="24"
-                      >
-                        <path
-                          fill="none"
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeMiterlimit="10"
-                          strokeWidth="1.5"
-                          d="M4.5 12h15m-15 5.77h15M4.5 6.23h15"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </>
-              )}
+                  </button>
+                </div>
+              </>
             </div>
           </nav>
         </div>
-
         {/* ------------------------- Mobile sidebar starts ------------------------- */}
         {sidebarOpen && (
           <div
@@ -193,74 +151,45 @@ const Header = () => {
                 <MobileHeader key={index} item={item} />
               ))}
               <div className="flex flex-col items-center gap-3 px-2 mt-2">
-                {user || session?.user ? (
-                  <>
-                    <button
-                      onClick={() => signOut()}
-                      className="flex w-full group font-normal items-center gap-2 transition-all duration-200 ease-in-out text-white dark:text-dark_black px-4 py-2 bg-dark_black rounded-md hover:text-dark_black hover:bg-white border border-dark_black"
-                    >
-                      Sign Out
-                      <Icon
-                        icon="solar:logout-outline"
-                        width="25"
-                        height="25"
-                      />
-                    </button>
-                    <div className="group flex gap-2 items-center w-full border border-dark_black dark:border-white px-4 py-2 rounded-md hover:bg-dark_black transition-all duration-200 ease-in-out">
-                      <Image
-                        src="/images/home/avatar_1.jpg"
-                        alt="Image"
-                        width={25}
-                        height={25}
-                        quality={100}
-                        className="rounded-full cursor-pointer"
-                      />
-                      <p className="group-hover:text-white text-dark_black dark:text-white w-full capitalize">
-                        {user?.user?.email || session?.user?.name}
-                      </p>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <Link
-                      href="/contact"
-                      className="group flex items-center gap-2 px-5 py-2 rounded-full 
+                <>
+                  <Link
+                    href="/contact"
+                    className="group flex items-center gap-2 px-5 py-2 rounded-full 
               text-black border border-black 
               dark:text-white dark:border-white
                 font-semibold shadow-md transition duration-300 
               hover:bg-black hover:text-white 
                 focus:outline-none"
-                      style={{ minWidth: 120, justifyContent: "center" }}
+                    style={{ minWidth: 120, justifyContent: "center" }}
+                  >
+                    <span className="transition-transform duration-200 group-hover:translate-x-1">
+                      Contact Us
+                    </span>
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="transition-transform duration-200 group-hover:translate-x-1 border dark:border-white rounded-full"
                     >
-                      <span className="transition-transform duration-200 group-hover:translate-x-1">
-                        Contact Us
-                      </span>
-                      <svg
+                      <rect
                         width="22"
                         height="22"
-                        viewBox="0 0 22 22"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="transition-transform duration-200 group-hover:translate-x-1 border dark:border-white rounded-full"
-                      >
-                        <rect
-                          width="22"
-                          height="22"
-                          rx="11"
-                          className="fill-white group-hover:fill-black dark:group-hover:fill-white transition-colors duration-200"
-                        />
-                        <path
-                          d="M8 11h6M14 11l-2-2m2 2l-2 2"
-                          stroke="#000"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="transition-colors duration-200 group-hover:stroke-white dark:group-hover:stroke-black"
-                        />
-                      </svg>
-                    </Link>
-                  </>
-                )}
+                        rx="11"
+                        className="fill-white group-hover:fill-black dark:group-hover:fill-white transition-colors duration-200"
+                      />
+                      <path
+                        d="M8 11h6M14 11l-2-2m2 2l-2 2"
+                        stroke="#000"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="transition-colors duration-200 group-hover:stroke-white dark:group-hover:stroke-black"
+                      />
+                    </svg>
+                  </Link>
+                </>
               </div>
             </ul>
           </div>
