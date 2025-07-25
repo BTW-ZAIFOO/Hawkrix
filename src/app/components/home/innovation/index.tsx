@@ -1,8 +1,15 @@
 "use client";
-import Image from "next/image";
+
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import {
+  FaMobileAlt,
+  FaLaptopCode,
+  FaPaintBrush,
+  FaRobot,
+  FaCogs,
+} from "react-icons/fa";
 
 function Innovation() {
   const ref = useRef(null);
@@ -30,6 +37,15 @@ function Innovation() {
     animate: inView ? { y: 0, opacity: 1 } : { y: "25%", opacity: 0 },
     transition: { duration: 0.3, delay: 0.3 + index * 0.3 },
   });
+
+  const iconMap: Record<string, React.ElementType> = {
+    FaMobileAlt,
+    FaLaptopCode,
+    FaPaintBrush,
+    FaRobot,
+    FaCogs,
+  };
+
   return (
     <section id="services">
       <div ref={ref} className="2xl:py-20 py-11">
@@ -41,9 +57,9 @@ function Innovation() {
                 className="max-w-(--breakpoint-Xsm) text-center"
               >
                 <h2>
-                  Where innovation meets{" "}
+                  What We Give To You{" "}
                   <span className="instrument-font italic font-normal dark:text-white/70">
-                    aesthetics
+                  Amazingly
                   </span>
                 </h2>
               </motion.div>
@@ -52,18 +68,20 @@ function Innovation() {
                 className="grid auto-rows-max grid-cols-1 md:grid-cols-2 2xl:grid-cols-5 gap-6 w-full"
               >
                 {innovationList?.map((items: any, index: any) => {
+                  const IconComponent = iconMap[items.icon];
                   return (
                     <div
                       key={index}
                       className={`${items.bg_color} flex flex-col p-8 rounded-2xl gap-6 lg:gap-9 `}
                     >
                       <div>
-                        <Image
-                          src={items.image}
-                          alt="image"
-                          height={40}
-                          width={40}
-                        />
+                        {IconComponent ? (
+                          <IconComponent
+                            size={40}
+                            className={items.txt_color}
+                            aria-label={items.title}
+                          />
+                        ) : null}
                       </div>
                       <div>
                         <h5 className={`${items.txt_color}`}>
@@ -87,16 +105,16 @@ function Innovation() {
               className="flex flex-col gap-4 xl:flex xl:flex-row bg-dark_black items-center justify-between dark:bg-white/5 py-8 px-7 sm:px-12 rounded-3xl w-full"
             >
               <h4 className="text-white text-center xl:text-left">
-                See Our Work in Action.
-                <br /> Start Your Creative Journey with Us!
+                Want to Work with us
+                <br /> Stay In Touch.
               </h4>
               <div className="flex flex-col sm:flex-row gap-3 items-center">
                 <Link
-                  href="/contact"
-                  className="group gap-2 text-dark_black font-medium bg-white rounded-full flex items-center lg:gap-4 py-2 pl-5 pr-2 border border-white dark:border-opacity-50 hover:bg-transparent hover:text-white transition-all duration-200 ease-in-out"
+                  href="mailto:careers.Hawkrix@gmail.com"
+                  className="group gap-2 text-dark_black font-medium bg-white rounded-full flex items-center lg:gap-4 py-2   pl-5 pr-3 border border-white dark:border-opacity-50 hover:bg-transparent hover:text-white transition-all duration-200 ease-in-out"
                 >
                   <span className="group-hover:translate-x-9 transform transition-transform duration-200 ease-in-out">
-                    Let’s Collaborate
+                  For Collaboration
                   </span>
                   <svg
                     width="32"
@@ -124,7 +142,7 @@ function Innovation() {
                   </svg>
                 </Link>
                 <Link
-                  href="/#work"
+                  href="https://Hawkrix.vercel.app/"
                   className="group border border-white dark:border-white/50 text-white font-medium bg-dark_black gap-2 rounded-full flex items-center justify-between lg:gap-4 py-2 pl-5 pr-2 hover:opacity-95 hover:bg-transparent hover:text-white transition-all duration-200 ease-in-out"
                 >
                   <span className="group-hover:translate-x-9 transform transition-transform duration-200 ease-in-out">

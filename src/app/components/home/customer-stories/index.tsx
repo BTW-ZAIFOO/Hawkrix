@@ -23,7 +23,7 @@ function CustomerStories() {
                   </span>
                   <div className="flex flex-col gap-6 ">
                     <h4 className="text-white">
-                      “hawkrix’s expertise transformed my vision into success!”
+                      “Hawkrix’s expertise transformed my vision into success!”
                     </h4>
                     <div className="flex flex-col gap-1">
                       <p className="text-white font-medium">Kabir Shah</p>
@@ -77,7 +77,7 @@ function CustomerStories() {
                       Customer stories
                     </span>
                     <h2 className="text-2xl lg:text-5xl">
-                      “hawkrix Design Agency brought our ideas to life with
+                      “Hawkrix Design Agency brought our ideas to life with
                       exceptional creativity and precision, exceeding
                       expectations.”
                     </h2>

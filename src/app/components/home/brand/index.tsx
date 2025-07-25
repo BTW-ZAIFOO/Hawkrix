@@ -1,4 +1,5 @@
 "use client";
+
 import Slider from "react-infinite-logo-slider";
 import SingleBrand from "./SingleBrand";
 import { useEffect, useState } from "react";

@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
@@ -35,13 +36,12 @@ function HeroSection() {
       <div className="relative w-full pt-40 2xl:pb-20 pb-10 before:absolute before:w-full before:h-full before:bg-linear-to-r before:from-blue_gradient before:via-white before:to-yellow_gradient before:rounded-full before:top-24 before:blur-3xl before:-z-10 dark:before:from-dark_blue_gradient dark:before:via-black dark:before:to-dark_yellow_gradient dark:before:rounded-full dark:before:blur-3xl dark:before:-z-10">
         <div className="container relative z-10">
           <div ref={ref} className="flex flex-col gap-8">
-            {/* ---------------- heading text --------------- */}
             <motion.div
               {...bottomAnimation}
               className="relative flex flex-col text-center items-center gap-4"
             >
               <h1 className="font-medium w-full">
-                From Vision to Execution {" "}
+                From Vision to Execution{" "}
                 <span className="instrument-font italic font-normal dark:text-white/70">
                   We Transform Ideas into Reality
                 </span>
@@ -58,13 +58,12 @@ function HeroSection() {
               className="flex flex-col items-center justify-center gap-4"
             >
               <div className="flex flex-col items-center justify-center gap-8 w-full sm:flex-row">
-                {/* ----------- Get started Link -------------- */}
                 <Link
-                  href="/contact"
+                  href="mailto:careers.Hawkrix@gmail.com"
                   className="group bg-purple_blue text-white font-medium flex flex-row justify-between items-center py-2 px-5 rounded-full max-w-64 w-full md:py-3 border border-purple_blue transition-all duration-200 ease-in-out hover:bg-transparent hover:text-purple_blue"
                 >
                   <span className="flex text-start transform transition-transform duration-200 ease-in-out group-hover:translate-x-28">
-                    Get Started
+                    Email Us
                   </span>
                   <svg
                     width="40"
@@ -96,8 +95,6 @@ function HeroSection() {
                     />
                   </svg>
                 </Link>
-
-                {/* --------------- avatar division -------------- */}
                 <div className="flex items-center gap-7">
                   <ul className="avatar flex flex-row items-center">
                     {avatarList?.avatarList?.map((items: any, index: any) => (
@@ -114,7 +111,6 @@ function HeroSection() {
                       </li>
                     ))}
                   </ul>
-                  {/* -------------- Star rating division --------------- */}
                   <div className="gap-1 flex flex-col">
                     <div>
                       <StarRating count={4} color="#F59E0B" />

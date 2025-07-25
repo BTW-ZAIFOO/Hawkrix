@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 import {
   avatar,
   brand,
-  innovation,
   onlinePresence,
   creativeMind,
   WebResultTag,
@@ -10,6 +9,13 @@ import {
   faq,
   achievements,
 } from "@/app/types/menu";
+
+interface innovationItem {
+  icon: string; 
+  title: string;
+  bg_color: string;
+  txt_color: string;
+}
 
 const avatarList: avatar[] = [
   {
@@ -58,34 +64,34 @@ const brandList: brand[] = [
   },
 ];
 
-const innovationList: innovation[] = [
+const innovationList: innovationItem[] = [
   {
-    image: "/images/home/innovation/brand.svg",
-    title: "Brand\nStrategy",
+    icon: "FaMobileAlt",
+    title: "Mobile App\nDevelopment",
     bg_color: "bg-purple/20",
     txt_color: "text-purple",
   },
   {
-    image: "/images/home/innovation/digitalmarketing.svg",
-    title: "Digital\nMarketing",
+    icon: "FaLaptopCode",
+    title: "Website\nDevelopment",
     bg_color: "bg-blue/20",
     txt_color: "text-blue",
   },
   {
-    image: "/images/home/innovation/uiux.svg",
-    title: "UI/UX\nDesign",
+    icon: "FaPaintBrush",
+    title: "UI/UX Design \nGraphic Designing",
     bg_color: "bg-orange/20",
     txt_color: "text-orange",
   },
   {
-    image: "/images/home/innovation/analitics.svg",
-    title: "Analytics &\nReporting",
+    icon: "FaRobot",
+    title: "Ai Chatbot Development\nAi Automation",
     bg_color: "bg-green/20",
     txt_color: "text-green",
   },
   {
-    image: "/images/home/innovation/webdevp.svg",
-    title: "Web\nDevelopment",
+    icon: "FaCogs",
+    title: "Custom Software\nDevelopment",
     bg_color: "bg-pink/20",
     txt_color: "text-pink",
   },
@@ -213,17 +219,17 @@ const faqList: faq[] = [
   {
     faq_que: "What services does Hawkrix Agency offer?",
     faq_ans:
-      "Yes, we provide post-launch support to ensure smooth implementation and offer ongoing maintenance packages for clients needing regular updates or technical assistance.",
+      "We offer a wide range of services including web and mobile app development, UI/UX design, AI chatbot development, branding, and ongoing support.",
   },
   {
     faq_que: "How long does a typical project take?",
     faq_ans:
-      "Yes, we provide post-launch support to ensure smooth implementation and offer ongoing maintenance packages for clients needing regular updates or technical assistance.",
+      "Project timelines vary depending on complexity and requirements. Most projects take between 4 to 12 weeks from start to finish.",
   },
   {
-    faq_que: "How is pricing structured at hawkrix Agency?",
+    faq_que: "How is pricing structured at Hawkrix Agency?",
     faq_ans:
-      "Yes, we provide post-launch support to ensure smooth implementation and offer ongoing maintenance packages for clients needing regular updates or technical assistance.",
+      "Pricing is structured based on the scope and complexity of the project. We offer different plans to suit various needs, including Starter and Pro packages.",
   },
   {
     faq_que: "Do you offer ongoing support after project completion?",
@@ -233,7 +239,7 @@ const faqList: faq[] = [
   {
     faq_que: "How often will I receive updates on my project?",
     faq_ans:
-      "Yes, we provide post-launch support to ensure smooth implementation and offer ongoing maintenance packages for clients needing regular updates or technical assistance.",
+      "We provide regular updates throughout the project. The frequency depends on your chosen plan, ranging from every two days to daily updates.",
   },
 ];
 

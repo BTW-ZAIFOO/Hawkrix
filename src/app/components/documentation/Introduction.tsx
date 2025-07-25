@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useState } from "react";
@@ -83,7 +84,7 @@ export const Introduction = () => {
         </div>
         <div className="mt-5">
           <p className="text-base font-medium text-midnight_text dark:text-grey">
-            hawkrix Tailwind NextJs Template is built with Tailwindcss and Nextjs.
+            Hawkrix Tailwind NextJs Template is built with Tailwindcss and Nextjs.
           </p>
           <p className="text-base font-medium text-midnight_text dark:text-grey">
             These theme is ready to use and you can totally customize as per

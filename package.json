@@ -1,5 +1,5 @@
 {
-  "name": "hawkrix_project",
+  "name": "Hawkrix_project",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -28,6 +28,7 @@
     "react-countup": "^6.5.3",
     "react-dom": "^19.0.0",
     "react-hot-toast": "^2.5.2",
+    "react-icons": "^5.5.0",
     "react-infinite-logo-slider": "^1.1.4",
     "react-intersection-observer": "^9.15.1",
     "tailwind-merge": "^3.0.2",

@@ -2,9 +2,9 @@ import { NextResponse } from "next/server";
 
 const footerData = {
   brand: {
-    name: "hawkrix",
+    name: "Hawkrix",
     tagline:
-      "Empowering businesses with innovative solutions. Let's create something amazing together.",
+      "From Vision to Execution We Transform Ideas into Reality.",
     socialLinks: [
       {
         icon: "/images/home/footerSocialIcon/linkedin.svg",
@@ -25,22 +25,12 @@ const footerData = {
       { name: "About us", url: "/#aboutus" },
       { name: "Work", url: "/#work" },
       { name: "Services", url: "/#services" },
-      { name: "Pricing", url: "/#pricing" },
-    ],
-  },
-  otherPages: {
-    name: "Other Pages",
-    links: [
-      { name: "Error 404", url: "/not-found" },
-      { name: "Terms & Conditions", url: "/terms-and-conditions" },
-      { name: "Privacy Policy", url: "/privacy-policy" },
-      { name: "Documentation", url: "/documentation" },
     ],
   },
   contactDetails: {
     name: "Contact Details",
     address: "Okara, Punjab Pakistan",
-    email: "careers.hawkrix@gmail.com",
+    email: "careers.Hawkrix@gmail.com",
     phone: "0318-9374797",
   },
   copyright: "©2025 Hawkrix. All Rights Reserved",

@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`hawkrix-agency`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`Hawkrix-agency`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
