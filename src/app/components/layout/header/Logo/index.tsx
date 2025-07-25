@@ -6,7 +6,7 @@ const Logo: React.FC = () => {
     <Link href="/" className="inline-block">
       <div className="relative w-[150px] h-[80px] sm:w-[150px] sm:h-[70px]">
         <Image
-          src="/images/logo/Hawkrix logo.png"
+          src="/images/logo/hawkrix logo.png"
           alt="Hawkrix Logo"
           fill
           className="dark:hidden object-contain"
@@ -14,7 +14,7 @@ const Logo: React.FC = () => {
           priority
         />
         <Image
-          src="/images/logo/Hawkrix logo.png"
+          src="/images/logo/hawkrix logo.png"
           alt="Hawkrix Logo Dark"
           fill
           className="hidden dark:block object-contain invert"
