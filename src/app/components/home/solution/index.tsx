@@ -2,11 +2,10 @@
 
 import Link from "next/link";
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 function Solutions() {
   const ref = useRef(null);
-  const inView = useInView(ref);
 
   const bottomAnimation = {
     initial: { y: "5%", opacity: 0 },

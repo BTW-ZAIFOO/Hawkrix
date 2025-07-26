@@ -23,6 +23,7 @@ function OnlinePresence() {
 
     fetchData();
   }, []);
+  
   return (
     <section id="work">
       <div className="2xl:py-20 py-11">
@@ -53,7 +54,6 @@ function OnlinePresence() {
                         className="rounded-2xl"
                         unoptimized={true}
                       />
-
                       <Link
                         href={"https://hawkrix.vercel.app/"}
                         target="blank"
@@ -69,7 +69,6 @@ function OnlinePresence() {
                         </span>
                       </Link>
                     </div>
-
                     <div className="flex flex-col items-start gap-4">
                       <h5 className="group-hover:text-purple_blue">
                         {items.title}

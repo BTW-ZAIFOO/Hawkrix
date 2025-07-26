@@ -3,8 +3,7 @@ import { NextResponse } from "next/server";
 const footerData = {
   brand: {
     name: "Hawkrix",
-    tagline:
-      "From Vision to Execution We Transform Ideas into Reality.",
+    tagline: "From Vision to Execution We Transform Ideas into Reality.",
     socialLinks: [
       {
         icon: "/images/home/footerSocialIcon/linkedin.svg",

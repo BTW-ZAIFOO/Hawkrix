@@ -59,7 +59,7 @@ function Innovation() {
                 <h2>
                   What We Give To You{" "}
                   <span className="instrument-font italic font-normal dark:text-white/70">
-                  Amazingly
+                    Amazingly
                   </span>
                 </h2>
               </motion.div>
@@ -114,7 +114,7 @@ function Innovation() {
                   className="group gap-2 text-dark_black font-medium bg-white rounded-full flex items-center lg:gap-4 py-2   pl-5 pr-3 border border-white dark:border-opacity-50 hover:bg-transparent hover:text-white transition-all duration-200 ease-in-out"
                 >
                   <span className="group-hover:translate-x-9 transform transition-transform duration-200 ease-in-out">
-                  For Collaboration
+                    For Collaboration
                   </span>
                   <svg
                     width="32"

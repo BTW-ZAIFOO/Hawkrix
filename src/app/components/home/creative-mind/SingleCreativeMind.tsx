@@ -18,8 +18,12 @@ const SingleCreativeMind = ({ creativemind }: { creativemind: any }) => {
       </div>
       <div className="flex flex-col gap-4 items-center">
         <div className="flex flex-col gap-1 items-center">
-          <p className="font-medium text-3xl md:text-6xl font-sans italic">{name}</p>
-          <p className="text-dark_black/60 dark:text-white/60 text-xl md:text-2xl">{position}</p>
+          <p className="font-medium text-3xl md:text-6xl font-sans italic">
+            {name}
+          </p>
+          <p className="text-dark_black/60 dark:text-white/60 text-xl md:text-2xl">
+            {position}
+          </p>
         </div>
         <div className="flex gap-4">
           <Link

@@ -17,36 +17,16 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
-      {/* ---------------------Hero section Starts-----------------  */}
       <HeroSection />
-      {/* ---------------------Hero section Ends-----------------  */}
-      {/* ---------------------Brand logo section Starts-----------------  */}
       <Brand />
-      {/* ---------------------Brand logo section Ends-----------------  */}
-      {/* ---------------------Web result section Starts-----------------  */}
       <WebResult />
-      {/* ---------------------Web result section Ends-----------------  */}
-      {/* ---------------------Innovation section Starts-----------------  */}
       <Innovation />
-      {/* ---------------------Innovation section Ends-----------------  */}
-      {/* ---------------------Online presence section Starts-----------------  */}
       <OnlinePresence />
-      {/* ---------------------Online presence section Ends-----------------  */}
-      {/* ---------------------Creative mind section Starts-----------------  */}
       <CreativeMind />
-      {/* ---------------------Creative mind section Ends-----------------  */}
-      {/* ---------------------Customer Stories section Starts-----------------  */}
       <CustomerStories />
-      {/* ---------------------Customer Stories section Ends-----------------  */}
-      {/* ---------------------Faq section Starts-----------------  */}
       <Faq />
-      {/* ---------------------Faq section Ends-----------------  */}
-      {/* ---------------------Achievements section Starts-----------------  */}
       <Achievements />
-      {/* ---------------------Achievements section Ends-----------------  */}
-      {/* ---------------------Solutions section Starts-----------------  */}
       <Solutions />
-      {/* ---------------------Solutions section Ends-----------------  */}
     </main>
   );
 }

@@ -4,7 +4,7 @@ import Link from "next/link";
 const Logo: React.FC = () => {
   return (
     <Link href="/" className="inline-block">
-      <div className="relative w-[150px] h-[80px] sm:w-[150px] sm:h-[70px]">
+      <div className="relative w-[140px] h-[70px] sm:w-[140px] sm:h-[60px]">
         <Image
           src="/images/logo/hawkrix logo.png"
           alt="Hawkrix Logo"

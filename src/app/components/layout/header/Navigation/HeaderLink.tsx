@@ -5,7 +5,7 @@ import { HeaderItem } from "../../../../types/menu";
 import { usePathname, useSearchParams } from "next/navigation";
 import Link from "next/link";
 
-const OFFSET = 80; 
+const OFFSET = 80;
 
 const useActiveLink = (setActiveLink: (link: string) => void) => {
   const pathname = usePathname();

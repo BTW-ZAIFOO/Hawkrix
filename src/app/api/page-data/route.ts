@@ -11,7 +11,7 @@ import {
 } from "@/app/types/menu";
 
 interface innovationItem {
-  icon: string; 
+  icon: string;
   title: string;
   bg_color: string;
   txt_color: string;
@@ -201,8 +201,7 @@ const faqList: faq[] = [
   },
   {
     faq_que: "How long does a typical project take?",
-    faq_ans:
-      "Project timelines vary depending on complexity and requirements.",
+    faq_ans: "Project timelines vary depending on complexity and requirements.",
   },
   {
     faq_que: "How is pricing structured at Hawkrix Agency?",
