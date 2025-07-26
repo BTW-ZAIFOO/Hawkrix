@@ -21,13 +21,9 @@ export default function RootLayout({
             enableSystem={false}
             defaultTheme="light"
           >
-            {/* ---------------------Header Starts-----------------  */}
             <Header />
-            {/* ---------------------Header Ends-------------------  */}
             {children}
-            {/* ---------------------Footer Starts-----------------  */}
             <Footer />
-            {/* ---------------------Footer Ends-----------------  */}
             <ScrollToTop />
           </ThemeProvider>
         </SessionProvider>

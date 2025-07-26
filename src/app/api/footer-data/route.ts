@@ -15,11 +15,6 @@ const footerData = {
         dark_icon: "/images/home/footerSocialIcon/instagram_dark.svg",
         link: "https://www.instagram.com/hawkrix?igsh=MTMzb3J1cWMwcW1sNQ==",
       },
-      {
-        icon: "/images/home/footerSocialIcon/email.png",
-        dark_icon: "/images/home/footerSocialIcon/email_dark.png",
-        link: "mailto:careers.hawkrix@gmail.com",
-      },
     ],
   },
   sitemap: {

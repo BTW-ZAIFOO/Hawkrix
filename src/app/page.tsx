@@ -7,7 +7,6 @@ import Faq from "./components/home/faq";
 import HeroSection from "./components/home/hero";
 import Innovation from "./components/home/innovation";
 import OnlinePresence from "./components/home/online-presence";
-import Solutions from "./components/home/solution";
 import WebResult from "./components/home/web-result";
 
 export const metadata: Metadata = {
@@ -26,7 +25,6 @@ export default function Home() {
       <CustomerStories />
       <Faq />
       <Achievements />
-      <Solutions />
     </main>
   );
 }

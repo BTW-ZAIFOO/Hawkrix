@@ -224,28 +224,28 @@ const achievementsList: achievements[] = [
   {
     icon: "/images/home/achievement/framer_award.svg",
     dark_icon: "/images/home/achievement/dark_framer_award.svg",
-    sub_title: "Framer Awards",
+    sub_title: "Mobile/Web Awards",
     title:
       "Celebrated for cutting-edge interaction design and seamless user experiences.",
     year: "2024",
-    url: "https://www.framer.com/@wrap-pixel/",
+    url: "https://Hawkrix.vercel.app/",
   },
   {
     icon: "/images/home/achievement/dribble_award.svg",
     dark_icon: "/images/home/achievement/dribble_award.svg",
-    sub_title: "Dribbble Awards",
+    sub_title: "Design Awards",
     title: "Recognized for creative excellence and innovative design solutions",
     year: "2023",
-    url: "https://www.framer.com/@wrap-pixel/",
+    url: "https://Hawkrix.vercel.app/",
   },
   {
     icon: "/images/home/achievement/awward_award.svg",
     dark_icon: "/images/home/achievement/dark_awward_award.svg",
-    sub_title: "awwwards Awards",
+    sub_title: "Chatbot Integration Awards",
     title:
       "Honored with the Best Website Design for creativity, usability, and innovation.",
     year: "2022",
-    url: "https://www.framer.com/@wrap-pixel/",
+    url: "https://Hawkrix.vercel.app/",
   },
 ];
 
