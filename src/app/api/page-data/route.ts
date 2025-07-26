@@ -126,7 +126,7 @@ const onlinePresenceList: onlinePresence[] = [
 
 const creativeMindList: creativeMind[] = [
   {
-    image: "/images/home/creative/ceo.JPG",
+    image: "/images/home/creative/ceo.png",
     name: "HUZAIFA KHAN",
     position: "CE0 & Founder-Hawkrix",
     linkedinLink: "https://www.linkedin.com/in/huzaifakhan11",
