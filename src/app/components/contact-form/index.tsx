@@ -8,8 +8,6 @@ function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    interest: "design & branding",
-    budget: "",
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
@@ -25,8 +23,6 @@ function ContactForm() {
   const reset = () => {
     formData.name = "";
     formData.email = "";
-    formData.interest = "design & branding";
-    formData.budget = "";
     formData.message = "";
   };
 
@@ -34,14 +30,12 @@ function ContactForm() {
     e.preventDefault();
     setLoader(true);
 
-    fetch("https://formsubmit.co/ajax/bhainirav772@gmail.com", {
+    fetch("https://formsubmit.co/ajax/careers.hawkrix@gmail.com", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({
         name: formData.name,
         email: formData.email,
-        interest: formData.interest,
-        budget: formData.budget,
         message: formData.message,
       }),
     })
@@ -150,40 +144,6 @@ function ContactForm() {
                       onChange={handleChange}
                       placeholder="Enter your email"
                     />
-                  </div>
-                </div>
-                <div className="flex flex-col md:flex md:flex-row gap-6">
-                  <div className="w-full">
-                    <label htmlFor="interest">
-                      What are you interested in?
-                    </label>
-                    <select
-                      className="w-full mt-2 text-base px-4 rounded-full py-2.5 border transition-all duration-500 dark:border-white/20 focus:outline-0 dark:bg-black/40"
-                      name="interest"
-                      id="interest"
-                      value={formData.interest}
-                      onChange={handleChange}
-                    >
-                      <option value="design & branding">
-                        Design & Branding
-                      </option>
-                      <option value="Ecommerce">Ecommerce</option>
-                      <option value="Specialist">Specialist</option>
-                    </select>
-                  </div>
-                  <div className="w-full">
-                    <label htmlFor="budget">Project budget</label>
-                    <select
-                      className="w-full mt-2 text-base px-4 rounded-full py-2.5 border transition-all duration-500 dark:text-white border-solid dark:border-white/20 focus:outline-0 dark:bg-black/40"
-                      name="budget"
-                      id="budget"
-                      value={formData.budget}
-                      onChange={handleChange}
-                    >
-                      <option value="">Select your budget</option>
-                      <option value="$10000">$10,000</option>
-                      <option value="$50500">$50,500</option>
-                    </select>
                   </div>
                 </div>
                 <div className="w-full">
