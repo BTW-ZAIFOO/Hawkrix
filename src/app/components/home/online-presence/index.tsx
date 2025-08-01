@@ -23,7 +23,7 @@ function OnlinePresence() {
 
     fetchData();
   }, []);
-  
+
   return (
     <section id="work">
       <div className="2xl:py-20 py-11">
