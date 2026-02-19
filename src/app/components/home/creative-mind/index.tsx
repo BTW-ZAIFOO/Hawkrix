@@ -1,13 +1,10 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import SingleCreativeMind from "./SingleCreativeMind";
 
 function CreativeMind() {
-  const ref = useRef(null);
-  const inView = useInView(ref);
-  const [creativeMindList, setcreativeMindList] = useState<any>(null);
+  const [creativeMindList, setCreativeMindList] = useState<any>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,7 +13,7 @@ function CreativeMind() {
         if (!res.ok) throw new Error("Failed to fetch");
 
         const data = await res.json();
-        setcreativeMindList(data?.creativeMindList);
+        setCreativeMindList(data?.creativeMindList);
       } catch (error) {
         console.error("Error fetching services:", error);
       }
@@ -25,34 +22,26 @@ function CreativeMind() {
     fetchData();
   }, []);
 
-  const bottomAnimation = (index: any) => ({
-    initial: { y: "5%", opacity: 0 },
-    animate: inView ? { y: 0, opacity: 1 } : { y: "10%", opacity: 0 },
-    transition: { duration: 0.4, delay: 0.4 + index * 0.3 },
-  });
   return (
     <section id="team">
-      <div ref={ref} className="2xl:py-20 py-11">
+      <div className="2xl:py-20 py-11">
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-10 md:gap-20">
+            {/* Heading */}
             <div className="max-w-32 text-center">
-              <motion.div {...bottomAnimation(-1)}>
-                <h2>
-                  Led by passion, meet the mind behind{" "}
-                  <span className="instrument-font italic font-normal dark:text-white/70">
-                    our mission
-                  </span>
-                </h2>
-              </motion.div>
+              <h2>
+                Led by passion, meet the mind behind{" "}
+                <span className="instrument-font italic font-normal dark:text-white/70">
+                  our mission
+                </span>
+              </h2>
             </div>
+
+            {/* Creative Minds */}
             <div className="flex items-center justify-center">
-              {creativeMindList?.map((item: any, index: any) => {
-                return (
-                  <motion.div {...bottomAnimation(index)} key={index}>
-                    <SingleCreativeMind key={index} creativemind={item} />
-                  </motion.div>
-                );
-              })}
+              {creativeMindList?.map((item: any, index: any) => (
+                <SingleCreativeMind key={index} creativemind={item} />
+              ))}
             </div>
           </div>
         </div>

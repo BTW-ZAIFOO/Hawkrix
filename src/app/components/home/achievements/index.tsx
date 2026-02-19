@@ -1,12 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { useEffect, useState } from "react";
 import SingleAchievement from "./SingleAchievement";
 
 function Achievements() {
-  const ref = useRef(null);
-  const inView = useInView(ref);
   const [achievementsList, setAchievementsList] = useState<any>(null);
 
   useEffect(() => {
@@ -25,17 +22,12 @@ function Achievements() {
     fetchData();
   }, []);
 
-  const bottomAnimation = (index: any) => ({
-    initial: { y: "5%", opacity: 0 },
-    animate: inView ? { y: 0, opacity: 1 } : { y: "10%", opacity: 0 },
-    transition: { duration: 0.4, delay: 0.4 + index * 0.3 },
-  });
-
   return (
     <section id="awards">
-      <div ref={ref} className="2xl:py-20 py-11">
+      <div className="2xl:py-20 py-11">
         <div className="container">
           <div className="flex flex-col gap-10 md:gap-20">
+            {/* Heading */}
             <div className="max-w-3xl text-center mx-auto">
               <h2>
                 Accolades and achievements celebration our{" "}
@@ -44,14 +36,12 @@ function Achievements() {
                 </span>
               </h2>
             </div>
+
+            {/* Achievements Grid */}
             <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-              {achievementsList?.map((item: any, index: any) => {
-                return (
-                  <motion.div {...bottomAnimation(index)} key={index}>
-                    <SingleAchievement key={index} achievements={item} />
-                  </motion.div>
-                );
-              })}
+              {achievementsList?.map((item: any, index: any) => (
+                <SingleAchievement key={index} achievements={item} />
+              ))}
             </div>
           </div>
         </div>
